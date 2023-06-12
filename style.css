@@ -1,0 +1,44 @@
+.container{
+    height:500px;
+    width:100%;
+    padding:10px;
+    background-color: rgb(104, 8, 53);
+    color: rgb(249, 249, 249);
+}
+#h1{
+    position: absolute;
+left: 500px;
+padding: 52px;
+}
+#inp{
+    position: absolute;
+    left: 572px;
+    top: 163px;
+}
+#inp input{
+    height: 25px;
+margin: 13px;
+border-radius: 11px;
+} 
+#temp{
+    height: 25px;
+    margin: 13px;
+    border-radius: 11px;
+    background-color: white;
+color: #88044e;
+}
+#btn{
+    position: absolute;
+left: 715px;
+top: 245px;
+width: 131px;
+height: 37px;
+border-radius: 10px;
+background-color: white;
+color: #8a082d;
+}
+#sp{
+    position: absolute;
+left: 702px;
+top: 316px;
+}

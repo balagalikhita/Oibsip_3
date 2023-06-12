@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1">TEMPERATURE CONVERTER</h1>
+        <div id="inp"><span>Degrees:</span> <input type="text" id="inp1" placeholder="Enter the temperature" required step="0.01">
+            <span>Type:</span>
+            <select name="temp" id="temp">
+                <option value="1">Fahrenheit</option>
+                <option value="2">Celsius</option>
+            </select></div>
+
+        <button type="submit" id="btn" onclick="convert()">Convert</button>
+        <span id="sp">Result:</span>
+    </div>
+    <script>
+function celsiustofahrenheit(inp1){
+    return (inp1 * 9/5) + 32;
+}
+function fahrenheittocelsius(inp1){
+    return (inp1 - 32) * 5/9;
+}
+function convert(){
+    var temperature = parseFloat(document.getElementById("inp1").value);
+    var temp=parseFloat(document.getElementById("temp").value);
+    if (isNaN(temperature)) {
+        document.getElementById("sp").innerHTML = "Invalid temperature value.";
+        return;
+      }
+    if(temp=="1")
+    {
+        var fahrenheit = celsiustofahrenheit(temperature);
+      document.getElementById("sp").innerHTML = "Temperature in Fahrenheit: " + fahrenheit.toFixed(2);
+    }
+    else{
+        var celsius = fahrenheittocelsius(temperature);
+      document.getElementById("sp").innerHTML = "Temperature in celsius: " + celsius.toFixed(2);
+    }
+      
+}
+    </script>
+</body>
+
+</html>
